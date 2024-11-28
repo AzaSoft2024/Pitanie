@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог рецептов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header" class="full-screen-section">
+        
+        <nav>
+            <h1>Каталог рецептов</h1>
+
+
+            <ul>
+                <li><a href="#recipes">Рецепты</a></li>
+                <li><a href="#favorite">Избранное</a></li>
+                <li><a href="#plan">План питания</a></li>
+                <li><a href="#community">Сообщество</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="filters" class="full-screen-section filter-section">
+        
+        <div class="filter-options">
+            <div>
+                <h2>Найти рецепт</h2><label>Категория:
+                    <select id="categoryFilter">
+                        <option value="">Все</option>
+                        <option value="breakfast">Завтрак</option>
+                        <option value="lunch">Обед</option>
+                        <option value="dinner">Ужин</option>
+                        <option value="dessert">Десерт</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>Кухня:
+                    <select id="cuisineFilter">
+                        <option value="">Все</option>
+                        <option value="italian">Итальянская</option>
+                        <option value="japanese">Японская</option>
+                        <option value="mexican">Мексиканская</option>
+                    </select>
+                </label>
+            </div>
+            <button onclick="filterRecipes()" class="filter-button">Применить</button>
+        </div>
+    </section>
+
+    <section id="recipes" class="full-screen-section recipes-section">
+        
+        <div class="recipe-card" data-category="lunch" data-cuisine="italian">
+            <img src="55.jpg" alt="Паста с томатами" class="recipe-image">
+            <div class="recipe-content">
+                <h3>Паста с томатами</h3>
+                <p>Ингредиенты: паста, томаты, базилик</p>
+                <button onclick="addToFavorites(this)" class="favorite-button">Добавить в избранное</button>
+            </div>
+        </div>
+        <div class="recipe-card" data-category="dinner" data-cuisine="japanese">
+            <img src="77.jpg" alt="Суши" class="recipe-image">
+            <div class="recipe-content">
+                <h3>Суши</h3>
+                <p>Ингредиенты: рис, рыба, нори</p>
+                <button onclick="addToFavorites(this)" class="favorite-button">Добавить в избранное</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="favorite" class="full-screen-section favorite-section">
+        <h2>Избранное</h2>
+        <div id="favoritesList" class="favorites-list">
+            <p>Добавленные рецепты будут отображаться здесь.</p>
+        </div>
+    </section>
+
+    <section id="plan" class="full-screen-section plan-section">
+        <h2>План питания</h2>
+        <p>Здесь вы можете добавлять рецепты в план на неделю или месяц.</p>
+        <button onclick="downloadPlan()" class="download-button">Скачать план в PDF</button>
+    </section>
+
+    <section id="community" class="full-screen-section community-section">
+        <h2>Сообщество и отзывы</h2>
+        <p>Оставьте свои отзывы и делитесь фотографиями блюд!</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

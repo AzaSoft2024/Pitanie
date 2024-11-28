@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a2a2a2b7;
+    color: #333;
+}
+
+.full-screen-section {
+    width: 100%;
+    height: 100vh; /* Задаем высоту в 100% от экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(67.webp);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-image: url('67.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;/* Добавьте свой фоновый рисунок */
+
+    padding: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    background-image: url('88.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;/* Сделаем фон полупрозрачным */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-section {
+    background-color: #FFEFD5;
+    border-radius: 10px;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.recipes-section, .favorite-section, .plan-section, .community-section {
+    background-image: url('99.jpg'); /* Добавьте свой фоновый рисунок */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.favorite-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #32CD32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.download-button {
+    padding: 0.5rem 1.5rem;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.favorites-list .recipe-card {
+    width: 100%;
+    max-width: 300px;
+}
+
+.community-section {
+    text-align: center;
+    background-color: #676765;
+}
